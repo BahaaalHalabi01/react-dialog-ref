@@ -1,0 +1,40 @@
+{
+  "name": "react-dialog-ref",
+  "author": "BahaaalHalabi",
+  "version": "0.0.1",
+  "description": "react context helper for creating reusable refs",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm build --watch",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "eslint src/",
+    "type-check": "tsc --noEmit",
+    "prepare": "pnpm run build"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.2.74",
+    "@vercel/style-guide": "^5.2.0",
+    "eslint": "^8.0.1",
+    "prettier": "3.2.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
